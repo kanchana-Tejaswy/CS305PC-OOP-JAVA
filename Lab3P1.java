@@ -1,22 +1,24 @@
 
 import java.util.Scanner;
-class Lab3P1{
-	public static void main(String[] args){
-  				Scanner s = new Scanner(System.in);
-  				int n = s.nextInt();
-  				int i=2;
- 	         while(i < n){
-  							int j=2, count = 0;
-  							if(i == 2) count++;
-  							while(j<i){
-  										if(i%j==0) break;
-  										else count++;
-  										j++;
-  							}
-  							if(count>0)
-  									System.out.println(i);
-  							i++;
-  							
-  							}
-  				}
-  	}
+
+class Lab3P1 {
+    public static void main(String... args) {
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+
+        for (int i = 2; i < a; i++) {
+            boolean isPrime = true;
+
+            for (int j = 2; j <= i / 2; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                System.out.println(i);
+            }
+        }
+    }
+}
