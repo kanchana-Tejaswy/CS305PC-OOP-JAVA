@@ -1,24 +1,32 @@
-// method over loading
+import java.util.Scanner;
 class Lab3P3{
-			public static void main(String[] args){
-			Lab3P3 
-			l.display(); l.display(10);l.display("String");l.display(10, "String");
-			}
-			
-			public void show(){
-						System.out.println("Method without params");
-						
-			}
-			public void show(int x){
-						System.out.println("Method with int params: " +x);
-			}
-			public void show(String s){
-							System.out.println("Method with String parans: " +s);
-							
-			}
-			public void show(int x, String s){
-						System.out.println("Method with two params int and String: "+ x + " "+ s);
-			}
-			
-			
+	public static void main(String...args){
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int i =2;
+	do{
+		int j=2,count=0;
+		do{
+			if(i==2){
+				count++;
+				j++;
+				continue;
+		          }
+			if(i %j == 0){
+				count=0;
+				break;
+				}
+			else
+				count++;
+				j++;
+				
+		}while(j<i);
+			if(count > 0)
+				System.out.println(i);
+				i++;
+			   
+	}while(i<n);
+      
+	
+   }	
 }
