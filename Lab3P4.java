@@ -1,24 +1,24 @@
 import java.util.Scanner;
 class Lab3P4{
-		public static void main(String[] args){
-							Lab3P4 l = new Lab3P4();
-							Lab3P4 l1 = new Lab3P4();
-							Lab3P4 l2 = new Lab3P4();
-							Lab3P4 l3 = new Lab3P4();
-							l.show; l.show(10); l.show("String"); l.show(10, "String");
-							
-		}
-		Lab3P4(){
-				System.out.println("Constructor without params"); 
-		}
-		Lab3P4(int x){
-						System.out.println("Constructor with int params:" +x);
-						}
-		Lab3P4(String s){
-							System.out.print("Constructor with String params:" +s);
-		}
-		Lab3P4( int x,String s){
-									System.out.println(
-		}
-						
+	public static void main(String...args){
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		String y = sc.next();
+	 	Lab3P4 m = new Lab3P4();
+	 	m.display();
+	 	m.display(x);
+	 	m.display(x,y);
+	 	}
+	 	public  void display(){
+	 		System.out.println("M O L 1");
+	 	        }
+	 		public void display(int x){
+	 			System.out.println("M O L 2 "+ x);
+	 		}
+	 			public void display(int x,String y){
+	 				System.out.println("M O L 3 " + x + " "+y);
+	 		}
+	 			
+	
+	
 }
